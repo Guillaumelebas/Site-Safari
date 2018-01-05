@@ -1,0 +1,37 @@
+<!!DOCTYPE>
+<html lang="fr">
+<head>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="styleclique.css">
+	<title>GUEPARD</TITLE>
+	<script>
+		function positionSouris(event)
+		{
+			var posX;
+			var posY;
+			posX = event.clientX;
+			posY = event.clientY;
+			document.getElementById('divPosition').innerHTML=
+			'Position: X='+posX+' Y='+posY;
+		}
+	</script>
+<head/>
+
+<body onmousemove="positionSouris(event);">
+
+	<div class="Image">
+		<img src="guepard.jpg" alt="guepard" usemap="#Guepard"/>
+	
+	
+		<h2>ZONE CLIQUABLE SUR UNE IMAGE</h2>
+		
+			<map name="Guepard"> 
+				<area shape="rect" coords="30,122,120,159" href="#"> 
+			 </map> 
+		
+	</div>
+	<div class="DIV" id="divPosition">
+	</div>
+</body>
+
+</html>
